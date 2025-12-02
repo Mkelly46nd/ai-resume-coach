@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "AI-powered resume analysis tool using Claude Sonnet 4",
   "main": "server.js",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js"
