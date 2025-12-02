@@ -1,0 +1,23 @@
+{
+  "name": "ai-resume-coach",
+  "version": "1.0.0",
+  "description": "AI-powered resume analysis tool using Claude Sonnet 4",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "resume",
+    "ai",
+    "claude",
+    "career"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.18.2"
+  }
+}

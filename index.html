@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Coach - Get Expert Resume Feedback Instantly</title>
+    <meta name="description" content="Get AI-powered resume feedback using Claude Sonnet 4. Improve your resume with detailed analysis, ATS compatibility scores, and actionable rewrite suggestions.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>AI Resume Coach</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#try-it">Try It Now</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="hero-title">Land Your Dream Job with AI-Powered Resume Feedback</h1>
+            <p class="hero-subtitle">Get instant, expert-level resume analysis powered by Claude Sonnet 4. Improve your ATS compatibility, strengthen your content, and stand out to recruiters.</p>
+            <a href="#try-it" class="cta-button">Analyze Your Resume Now</a>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">The Resume Challenge</h2>
+            <div class="problem-cards">
+                <div class="problem-card">
+                    <div class="problem-icon">⏱️</div>
+                    <h3>6-8 Seconds</h3>
+                    <p>That's all the time a recruiter spends reviewing your resume on average. Make every second count with optimized content.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">💰</div>
+                    <h3>$100-500</h3>
+                    <p>Professional resume coaching can cost hundreds of dollars. Get expert-level feedback instantly and for free.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3>75% Rejected</h3>
+                    <p>Most resumes are rejected by ATS systems before a human even sees them. Ensure your resume passes the screening.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Paste Your Resume</h3>
+                    <p>Copy and paste your resume text into our analyzer. Optionally, include a job description to get targeted feedback.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>AI Analysis</h3>
+                    <p>Our AI powered by Claude Sonnet 4 analyzes your resume for strengths, weaknesses, ATS compatibility, and more.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get Actionable Feedback</h3>
+                    <p>Receive detailed feedback with specific rewrite suggestions, ATS scores, and concrete next steps to improve your resume.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Try It Section -->
+    <section id="try-it" class="try-it">
+        <div class="container">
+            <h2 class="section-title">Try It Now</h2>
+            <p class="section-subtitle">Paste your resume below and get instant feedback. For better results, include the job description you're applying for.</p>
+            
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="resume-input">Your Resume Text *</label>
+                    <textarea 
+                        id="resume-input" 
+                        placeholder="Paste your resume text here... (Required)"
+                        rows="12"
+                    ></textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label for="job-description">Job Description (Optional)</label>
+                    <textarea 
+                        id="job-description" 
+                        placeholder="Paste the job description here for targeted feedback... (Optional)"
+                        rows="8"
+                    ></textarea>
+                </div>
+                
+                <button id="analyze-btn" class="analyze-button">
+                    <span id="btn-text">Analyze Resume</span>
+                    <span id="btn-loading" style="display: none;">
+                        <span class="spinner"></span> Analyzing...
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results-section" class="results-section" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Your Resume Analysis</h2>
+            <div id="results-content"></div>
+        </div>
+    </section>
+
+    <!-- AI Explanation Section -->
+    <section class="ai-explanation">
+        <div class="container">
+            <h2 class="section-title">Powered by Claude Sonnet 4</h2>
+            <div class="explanation-content">
+                <p>Our AI Resume Coach uses Anthropic's Claude Sonnet 4, one of the most advanced AI models available. Claude analyzes your resume with the same depth and expertise as a professional career coach.</p>
+                <p>Claude understands context, evaluates content quality, identifies ATS compatibility issues, and provides specific, actionable feedback. It doesn't just scan for keywords—it understands the nuances of effective resume writing.</p>
+                <div class="ai-features">
+                    <div class="ai-feature">
+                        <strong>Deep Analysis:</strong> Evaluates structure, content quality, and impact
+                    </div>
+                    <div class="ai-feature">
+                        <strong>ATS Optimization:</strong> Checks keyword usage, formatting, and compatibility
+                    </div>
+                    <div class="ai-feature">
+                        <strong>Actionable Feedback:</strong> Provides specific before/after examples and explanations
+                    </div>
+                    <div class="ai-feature">
+                        <strong>Job Matching:</strong> When provided, compares your resume against job requirements
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About AI Resume Coach</h2>
+            <div class="about-content">
+                <p>AI Resume Coach was created to democratize access to professional resume feedback. Traditional resume coaching services can be expensive and time-consuming, making it difficult for job seekers to get the help they need.</p>
+                <p>By leveraging cutting-edge AI technology, we provide instant, comprehensive resume analysis that rivals professional coaching services—completely free and accessible to everyone.</p>
+                <p>Whether you're a recent graduate, career changer, or experienced professional, our AI-powered tool helps you create a resume that stands out to both ATS systems and human recruiters.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 AI Resume Coach. Built with Claude Sonnet 4.</p>
+            <p>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
