@@ -189,6 +189,7 @@ AI Resume Coach uses **Claude Sonnet 4** (`claude-sonnet-4-20250514`) via the An
 
 ### Prerequisites
 
+- **Node.js** (v14 or higher) - [Download here](https://nodejs.org/)
 - A modern web browser (Chrome, Firefox, Safari, Edge)
 - A Claude API key from [Anthropic](https://console.anthropic.com/)
 
@@ -200,36 +201,50 @@ AI Resume Coach uses **Claude Sonnet 4** (`claude-sonnet-4-20250514`) via the An
    cd ai-resume-coach
    ```
 
-2. **Get your Claude API Key**:
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+   This installs Express, CORS, and dotenv packages needed for the server.
+
+3. **Get your Claude API Key**:
    - Sign up for an account at [Anthropic Console](https://console.anthropic.com/)
    - Navigate to API Keys section
    - Create a new API key
    - Copy the key (starts with `sk-ant-...`)
 
-3. **Add your API key to `script.js`**:
-   - Open `script.js` in your code editor
-   - Find the line: `const API_KEY = 'YOUR_CLAUDE_API_KEY_HERE';`
-   - Replace `'YOUR_CLAUDE_API_KEY_HERE'` with your actual API key:
-     ```javascript
-     const API_KEY = 'sk-ant-api03-your-actual-key-here';
+4. **Create a `.env` file**:
+   - Create a new file named `.env` in the project root
+   - Add your API key:
      ```
+     ANTHROPIC_API_KEY=sk-ant-api03-your-actual-key-here
+     ```
+   - ⚠️ **Important**: The `.env` file is already in `.gitignore` and won't be committed to Git
 
-4. **Open the application**:
-   - Simply open `index.html` in your web browser
-   - Or use a local server:
-     ```bash
-     # Using Python 3
-     python -m http.server 8000
-     
-     # Using Node.js (if you have http-server installed)
-     npx http-server
-     
-     # Then visit http://localhost:8000
-     ```
+5. **Start the server**:
+   ```bash
+   npm start
+   ```
+   You should see:
+   ```
+   Server running on http://localhost:3000
+   Open your browser and navigate to the URL above
+   ```
+
+6. **Open the application**:
+   - Navigate to **http://localhost:3000** in your browser
+   - The app is now ready to use!
+
+### Why a Backend Server?
+
+Anthropic's API doesn't allow direct browser requests due to CORS (Cross-Origin Resource Sharing) security policies. The Express server acts as a proxy, making API calls from the server side where CORS restrictions don't apply.
 
 ### Security Note
 
-⚠️ **Important**: Never commit your API key to version control. If you're using Git, make sure `script.js` is in your `.gitignore` or use environment variables for production deployments.
+✅ **Your API key is secure**: 
+- The API key is stored in `.env` (which is in `.gitignore`)
+- The key is never exposed to the browser
+- Only the server makes API calls with your key
 
 ## 📝 Prompt Engineering
 
